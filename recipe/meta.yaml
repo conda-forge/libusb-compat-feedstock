@@ -21,7 +21,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - automake    # [aarch64 or ppc64le]
+    - autoconf    # [unix]
+    - automake    # [unix]
     - libtool     # [unix]
     - pkg-config  # [unix]
     - make        # [unix]
