@@ -21,9 +21,10 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - libtool  # [unix]
+    - automatke   # [aarch64 or ppc64le]
+    - libtool     # [unix]
     - pkg-config  # [unix]
-    - make  # [unix]
+    - make        # [unix]
 
 test:
   commands:
