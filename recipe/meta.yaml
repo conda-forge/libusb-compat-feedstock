@@ -27,6 +27,7 @@ requirements:
     - pkg-config
     - make
     - binutils
+    - m4
 
 test:
   commands:
