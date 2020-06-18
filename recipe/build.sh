@@ -1,7 +1,7 @@
 #!/bin/sh
 
 sed -i '/^AC_PROG_CC/a AC_PROG_CXX' configure.in
-autoreconf
+autoreconf --force
 # http://www.linuxfromscratch.org/blfs/view/6.3/general/libusb.html
 export CFLAGS="$CFLAGS -Wno-error=format-truncation"
 ./configure --disable-build-docs --prefix=${PREFIX} --verbose
