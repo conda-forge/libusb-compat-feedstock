@@ -1,7 +1,8 @@
 #!/bin/sh
 
+# Add AC_PROG_CXX After AC_PROG_CC
 sed -i '/^AC_PROG_CC/a AC_PROG_CXX' configure.in
-autoreconf --force --add-missing
+autoreconf --force --install
 # http://www.linuxfromscratch.org/blfs/view/6.3/general/libusb.html
 export CFLAGS="$CFLAGS -Wno-error=format-truncation"
 ./configure --disable-build-docs --prefix=${PREFIX} --verbose
