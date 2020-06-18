@@ -21,9 +21,13 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - libtool  # [unix]
-    - pkg-config  # [unix]
-    - make  # [unix]
+    - autoconf
+    - automake
+    - libtool
+    - pkg-config
+    - make
+    - binutils
+    - m4
 
 test:
   commands:
