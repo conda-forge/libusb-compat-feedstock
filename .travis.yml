@@ -6,17 +6,17 @@ language: generic
 env:
   global:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
-    - secure: "W02nvspXaafCloOW3L+xGpxByjgl+WKDxa13ImeCpW7wkWreXs4kb8L4GRJV4wHDkXVWzD08JTtlzGDB1kt95nx3uMy35SvUJrGAOzsEP7hjCAOH4mplBJOOplDMKAS95tRHIK94yJK4Asc48/y988itY/XmBFEvYrTVdPSAlkbp5Yly4lI0UfCAOpf5n4i0cwO/Jexa4FJhQsrUftduMqRKeqw9ekDVqsrxffAOQtkZ4nW8QwK2SOOREcUHVDg+Lx4/FL3Z5kN9rhi4zZcPFVg6JJdI0bzglwlQfIczTPHOLhAAFSvMcEdoQKx7ou1MmSYs6n52BSfZSr8dndr0L3YoDetsNy3yUJBIz7E4c32OmDHZ4Q7FnWQx+eQpt8obul6D5n7Yij6SJpYhACgltSAO2+AbK32Fbh1hESoGJWksRWP/Vm4q1FZ+cRCQ+eQvDIoz6eQSkCPnMtk2ZUw3D0UfLFhXozG5ouHSkGKnI3t4Lh1J71qUSRGIW/diZzxPfcml7LvK8JfvGQKdSz6E5HSWB6WbhTW3d8UzS6o3MKO+hPogRzt7OTFPPNuSB47IjweA2WvDhgiftzgfaSilSw6jNyonwLk77NYPoabZmdGqKWxszuuv+tzU6YEAGayIu4rg6ubfqv+FjkvryO5wjo+vgl4a0RGzdml+5sNTJdo="
+  - secure: W02nvspXaafCloOW3L+xGpxByjgl+WKDxa13ImeCpW7wkWreXs4kb8L4GRJV4wHDkXVWzD08JTtlzGDB1kt95nx3uMy35SvUJrGAOzsEP7hjCAOH4mplBJOOplDMKAS95tRHIK94yJK4Asc48/y988itY/XmBFEvYrTVdPSAlkbp5Yly4lI0UfCAOpf5n4i0cwO/Jexa4FJhQsrUftduMqRKeqw9ekDVqsrxffAOQtkZ4nW8QwK2SOOREcUHVDg+Lx4/FL3Z5kN9rhi4zZcPFVg6JJdI0bzglwlQfIczTPHOLhAAFSvMcEdoQKx7ou1MmSYs6n52BSfZSr8dndr0L3YoDetsNy3yUJBIz7E4c32OmDHZ4Q7FnWQx+eQpt8obul6D5n7Yij6SJpYhACgltSAO2+AbK32Fbh1hESoGJWksRWP/Vm4q1FZ+cRCQ+eQvDIoz6eQSkCPnMtk2ZUw3D0UfLFhXozG5ouHSkGKnI3t4Lh1J71qUSRGIW/diZzxPfcml7LvK8JfvGQKdSz6E5HSWB6WbhTW3d8UzS6o3MKO+hPogRzt7OTFPPNuSB47IjweA2WvDhgiftzgfaSilSw6jNyonwLk77NYPoabZmdGqKWxszuuv+tzU6YEAGayIu4rg6ubfqv+FjkvryO5wjo+vgl4a0RGzdml+5sNTJdo=
 
 matrix:
   include:
-    - env: CONFIG=linux_ppc64le_ UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
-      os: linux
-      arch: ppc64le
+  - env: CONFIG=linux_ppc64le_ UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
+    os: linux
+    arch: ppc64le
 
 script:
-  - export CI=travis
-  - export GIT_BRANCH="$TRAVIS_BRANCH"
+- export CI=travis
+- export GIT_BRANCH="$TRAVIS_BRANCH"
 
 
-  - if [[ ${PLATFORM} =~ .*linux.* ]]; then ./.scripts/run_docker_build.sh; fi
+- if [[ ${PLATFORM} =~ .*linux.* ]]; then ./.scripts/run_docker_build.sh; fi
