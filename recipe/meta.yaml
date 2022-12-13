@@ -9,7 +9,7 @@ source:
   sha256: 37f6f7d9de74196eb5fc0bbe0aea9b5c939de7f500acba3af6fd643f3b538b44
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # This package is very unlikely to change in the near future as it is
     # legacy code
